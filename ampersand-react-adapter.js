@@ -3,7 +3,7 @@ import bind from 'lodash/bind';
 // import forEach from 'lodash/forEach';
 import React from 'react';
 
-const deferBounce = function (fn) {
+const deferBounce = (fn) => {
 	let triggered = false;
 	return function () {
 		let self = this;
@@ -17,14 +17,18 @@ const deferBounce = function (fn) {
 	}
 };
 
-const safeForceUpdate = function () {
+const safeForceUpdate = () => {
 	if (this._isMounted) {
 		this.forceUpdate();
 	}
 };
 
+const getDisplayName = (WrappedComponent) => {
+	return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+};
+
 let ampersandReactAdapter = (WrappedComponent) => {
-	return class extends React.Component {
+	class AmpersandReactAdapter extends React.Component {
 
 		constructor(props) {
 			super(props);
@@ -83,6 +87,9 @@ let ampersandReactAdapter = (WrappedComponent) => {
 			return React.createElement(WrappedComponent, {...this.props}, null);
 		}
 	}
+
+	AmpersandReactAdapter.displayName = `AmpersandReactAdapter(${getDisplayName(WrappedComponent)})`;
+	return AmpersandReactAdapter;
 };
 // noinspection JSUnusedGlobalSymbols
 export default ampersandReactAdapter;
