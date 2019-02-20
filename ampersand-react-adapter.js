@@ -3,7 +3,7 @@ import bind from 'lodash/bind';
 // import forEach from 'lodash/forEach';
 import React from 'react';
 
-const deferBounce = (fn) => {
+const deferBounce = function(fn) {
 	let triggered = false;
 	return function () {
 		let self = this;
@@ -17,7 +17,7 @@ const deferBounce = (fn) => {
 	}
 };
 
-const safeForceUpdate = () => {
+const safeForceUpdate = function() {
 	if (this._isMounted) {
 		this.forceUpdate();
 	}
