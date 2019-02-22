@@ -2,6 +2,7 @@ import Events from 'ampersand-events';
 import bind from 'lodash/bind';
 // import forEach from 'lodash/forEach';
 import React from 'react';
+import hoistNonReactStatic from 'hoist-non-react-statics';
 
 const deferBounce = function(fn) {
 	let triggered = false;
@@ -89,6 +90,7 @@ let ampersandReactAdapter = (WrappedComponent) => {
 	}
 
 	AmpersandReactAdapter.displayName = `AmpersandReactAdapter(${getDisplayName(WrappedComponent)})`;
+	hoistNonReactStatic(AmpersandReactAdapter, WrappedComponent);
 	return AmpersandReactAdapter;
 };
 // noinspection JSUnusedGlobalSymbols
