@@ -88,6 +88,7 @@ let ampersandReactAdapter = (WrappedComponent) => {
 		}
 	}
 
+	AmpersandReactAdapter.testing = WrappedComponent.testing;
 	AmpersandReactAdapter.displayName = `AmpersandReactAdapter(${getDisplayName(WrappedComponent)})`;
 	return AmpersandReactAdapter;
 };
