@@ -82,8 +82,8 @@ let ampersandReactAdapter = (WrappedComponent) => {
 		// noinspection JSUnusedGlobalSymbols
 		render() {
 			// TODO ishan 2019-02-21 Figure out how to use JSX
-			// return <WrappedComponent {...this.props} />;
-			return React.createElement(WrappedComponent, {...this.props}, null);
+			return <WrappedComponent {...this.props} />;
+			// return React.createElement(WrappedComponent, {...this.props}, null);
 		}
 	}
 
