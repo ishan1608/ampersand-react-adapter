@@ -1,6 +1,4 @@
 import Events from 'ampersand-events';
-// import bind from 'lodash/bind';
-// import forEach from 'lodash/forEach';
 import React from 'react';
 import hoistNonReactStatic from 'hoist-non-react-statics';
 
@@ -52,7 +50,6 @@ let ampersandReactAdapter = (WrappedComponent) => {
 				return;
 			}
 
-			// this.listenTo(modelOrCollection, events, deferBounce(bind(safeForceUpdate, this)));
 			this.listenTo(modelOrCollection, events, deferBounce(safeForceUpdate.bind(this)));
 
 			if (opts.reRender) safeForceUpdate.call(this);

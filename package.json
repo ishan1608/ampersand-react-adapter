@@ -8,8 +8,7 @@
 	},
 	"dependencies": {
 		"ampersand-events": "^2.0.2",
-		"hoist-non-react-statics": "^3.3.0",
-		"lodash": "^4.17.11"
+		"hoist-non-react-statics": "^3.3.0"
 	},
 	"peerDependencies": {
 		"react": "~16.x"
