@@ -1,10 +1,10 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/ampersand-react-adapter.js',
 	output: {
 		path: path.resolve(__dirname, 'build'),
-		filename: 'index.js',
+		filename: 'ampersand-react-adapter.js',
 		libraryTarget: 'commonjs2'
 	},
 	module: {

@@ -21,7 +21,7 @@
 		"react"
 	],
 	"license": "MIT",
-	"main": "build/index.js",
+	"main": "build/ampersand-react-adapter.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ishan1608/ampersand-react-adapter"
