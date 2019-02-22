@@ -1,0 +1,4 @@
+src/
+.npmignore
+.editorconfig
+webpack.config.js
