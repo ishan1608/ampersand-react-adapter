@@ -8,7 +8,8 @@
 	},
 	"dependencies": {
 		"ampersand-events": "^2.0.2",
-		"hoist-non-react-statics": "^3.3.0"
+		"hoist-non-react-statics": "^3.3.0",
+		"webpack": "^4.29.5"
 	},
 	"peerDependencies": {
 		"react": "~16.x"
@@ -20,15 +21,21 @@
 		"react"
 	],
 	"license": "MIT",
-	"main": "ampersand-react-adapter.js",
+	"main": "build/index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ishan1608/ampersand-react-adapter"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack --watch",
+		"build": "webpack"
 	},
 	"devDependencies": {
-		"react": "^16.8.2"
+		"@babel/core": "^7.3.3",
+		"@babel/preset-env": "^7.3.1",
+		"babel-loader": "^8.0.5",
+		"react": "^16.8.2",
+		"webpack-cli": "^3.2.3"
 	}
 }
