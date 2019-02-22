@@ -1,15 +1,14 @@
 {
 	"name": "ampersand-react-adapter",
 	"description": "Higher order component for react classes to easily listen for changes and re-render from ampersand models/collections.\nOriginal Author: Henrik Joreteg <henrik@andyet.net>",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"author": "Ishan <ishan1608@gmail.com>",
 	"bugs": {
 		"url": "https://github.com/ishan1608/ampersand-react-adapter/issues"
 	},
 	"dependencies": {
 		"ampersand-events": "^2.0.2",
-		"hoist-non-react-statics": "^3.3.0",
-		"webpack": "^4.29.5"
+		"hoist-non-react-statics": "^3.3.0"
 	},
 	"peerDependencies": {
 		"react": "~16.x"
@@ -37,6 +36,7 @@
 		"@babel/preset-react": "^7.0.0",
 		"babel-loader": "^8.0.5",
 		"react": "^16.8.2",
+		"webpack": "^4.29.5",
 		"webpack-cli": "^3.2.3"
 	}
 }
