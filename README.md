@@ -18,7 +18,7 @@ If it's a collection, it listens to `'add remove reset sort'` events. If it's a 
 ## install
 [//]: # (TODO ishan 2019-02-23 Update the installation instructions once the package is ready to be published to npm)
 ```
-npm install git://github.com/ishan1608/ampersand-react-adapter.git
+npm install ampersand-react-adapter
 ```
 
 ## example
