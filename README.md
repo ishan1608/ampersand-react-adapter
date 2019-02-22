@@ -16,26 +16,25 @@ Or you can explicitly call `watch` on the component and pass an ampersand model,
 If it's a collection, it listens to `'add remove reset sort'` events. If it's a `State` object, it listens to `'change'` events.
 
 ## install
-[//]: # (TODO ishan 2019-02-20 Update the installation instructions)
+[//]: # (TODO ishan 2019-02-23 Update the installation instructions once the package is ready to be published to npm)
 ```
-npm install ampersand-react-mixin
+npm install git://github.com/ishan1608/ampersand-react-adapter.git
 ```
 
 ## example
-[//]: # (TODO ishan 2019-02-20 Update the example usage) 
 ```javascript
-var React = require('react');
-var ampersandMixin = require('ampersand-react-mixin');
+import React from 'react';
+import ampersandReactAdapter from 'ampersand-react-adapter';
 
-module.exports = React.createClass({
-    mixins: [ampersandMixin],
-    render: function () {
-        return (
-            <div></div>
-        )
-    }
-})
+class ExampleComponent extends React.Component{
+	render() {
+		return (
+			<div></div>
+		);
+	}
+}
 
+export default ampersandReactAdapter(ExampleComponent);
 ```
 
 ## license
@@ -43,4 +42,4 @@ module.exports = React.createClass({
 MIT
 
 ## NOTE
-This is an ongoing effort to take the original `ampersand-react-mixin` library and port it to React high-order component
+This is an effort to take the original [ampersand-react-mixin](https://github.com/AmpersandJS/ampersand-react-mixin) library and port it to [React Higher-Order Component](https://reactjs.org/docs/higher-order-components.html)
