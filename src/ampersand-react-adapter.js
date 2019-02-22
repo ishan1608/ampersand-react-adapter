@@ -60,13 +60,11 @@ let ampersandReactAdapter = (WrappedComponent) => {
 			this._isMounted = true;
 			const watched = this.getObservedItems && this.getObservedItems();
 			if (watched) {
-				// forEach(watched, this.watch, this);
 				for (let watchedObject of watched) {
 					this.watch(watchedObject, this);
 				}
 			}
 			if (this.autoWatch !== false) {
-				// forEach(this.props, this.watch, this);
 				for (let propKey of Object.keys(this.props)) {
 					this.watch(this.props[propKey], this);
 				}
@@ -81,9 +79,7 @@ let ampersandReactAdapter = (WrappedComponent) => {
 
 		// noinspection JSUnusedGlobalSymbols
 		render() {
-			// TODO ishan 2019-02-21 Figure out how to use JSX
-			// return <WrappedComponent {...this.props} />;
-			return React.createElement(WrappedComponent, {...this.props}, null);
+			return <WrappedComponent {...this.props} />;
 		}
 	}
 
